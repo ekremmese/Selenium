@@ -13,7 +13,6 @@ public class T3_GoogleSearch {
 
         //TC#3: Google search
         //1- Open a Chrome browser
-
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -25,6 +24,12 @@ public class T3_GoogleSearch {
         //4- PRESS ENTER using Keys.ENTER
         WebElement googleSearchBox = driver.findElement(By.name("q"));
         googleSearchBox.sendKeys("apple" + Keys.ENTER);
+        //googleSearchBox.sendKeys("apple");
+
+        //click Google Search Button - I tried to solve it with clicking on Google'da Ata but failed
+        //WebElement searchButton = driver.findElement(By.className("gNO89b"));
+        //searchButton.click();
+
 
         //5- Verify title:
         //Expected: Title should start with “apple” word
