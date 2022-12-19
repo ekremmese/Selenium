@@ -10,7 +10,7 @@ public class T5_getTextAnd_getAttribute {
     public static void main(String[] args) {
 
         //TC #5: getText() and getAttribute() method practice
-        //1- Open a chrome browser
+        //1- Open a Chrome browser
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -39,15 +39,15 @@ public class T5_getTextAnd_getAttribute {
         //5- Verify placeholder attribute’s value is as expected:
         //Expected: first name
 
-        String expectedAttribute = "first name";
-        String actualAttribute = driver.findElement(By.name("firstname")).getAttribute("placeholder");
+        String expectedAttributeOfPlaceHolder = "first name";
+        String actualAttributeOfPlaceHolder = driver.findElement(By.name("firstname")).getAttribute("placeholder");
 
-        System.out.println(actualAttribute);
+        System.out.println(actualAttributeOfPlaceHolder);
 
-        if (expectedAttribute.equals(actualAttribute)) {
-            System.out.println("Header Verification Passed!");
+        if (expectedAttributeOfPlaceHolder.equals(actualAttributeOfPlaceHolder)) {
+            System.out.println("Placeholder Verification Passed!");
         } else {
-            System.out.println("Header Verification Failed");
+            System.out.println("Placeholder Verification Failed");
         }
 
 
