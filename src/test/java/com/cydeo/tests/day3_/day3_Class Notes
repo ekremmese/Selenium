@@ -248,6 +248,9 @@ syntax#2:
 
 ex#3: ex: <a href="https://tesla.com" name="uh68" class="ff58" id="bb22"> TESLA CYBERTRUCK </a>
 
+a.ff58
+a#bb22
+
     tagName.classValue ---> a.ff58
 
     tagName#idValue --> a#bb22
@@ -333,3 +336,6 @@ EXPLANATIONS:
 
 
 1:31:41
+
+
+label[for='USER_REMEMBER']
