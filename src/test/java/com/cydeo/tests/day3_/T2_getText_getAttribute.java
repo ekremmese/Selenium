@@ -33,7 +33,7 @@ public class T2_getText_getAttribute {
         actualText = driver.findElement(By.className("login-link-forgot-pass")).getText();
         expectedText = "Forgot your password?";
 
-        if(actualText.equalsIgnoreCase(expectedText)){
+        if(actualText.equals(expectedText)){
             System.out.println("Link text verification is PASSED!");
         } else {
             System.out.println("Link text verification is FAILED!");
@@ -42,7 +42,7 @@ public class T2_getText_getAttribute {
         //5- Verify “forgot password” href attribute’s value contains expected:
         //Expected: forgot_password=yes
 
-        actualText = driver.findElement(By.className("login-link-forgot-pass")).getAttribute("href");
+        actualText = driver.findElement(By.className("login-link-forgot-pass")).getAttribute("href");  //that gets the value of the given attribute
         expectedText = "forgot_password=yes";
 
         if(actualText.contains(expectedText)){
