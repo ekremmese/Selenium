@@ -42,7 +42,7 @@ public class T3_getAttribute_cssSelector {
 
 
 
-        driver.quit();
+        //driver.quit();
 
     }
 }

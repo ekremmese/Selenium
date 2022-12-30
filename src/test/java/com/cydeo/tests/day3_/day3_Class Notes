@@ -288,6 +288,10 @@ Interview question: What is the difference between absolute xpath and relative x
 
 ex: <a href="https://tesla.com" name="uh68" class="ff58" id="bb22"> TESLA CYBERTRUCK </a>
 
+//a[@name='uh68']
+//a[@class='ff58']
+//a[@id='bb22']
+
 
 -->             //tagName[@attribute='value']
 
