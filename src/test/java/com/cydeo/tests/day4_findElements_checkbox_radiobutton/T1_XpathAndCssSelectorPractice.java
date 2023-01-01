@@ -82,7 +82,12 @@ public class T1_XpathAndCssSelectorPractice {
         //f. “Powered by Cydeo text
         WebElement poweredByCydeoText = driver.findElement(By.xpath("//div[contains(@style, 'text')]"));
 
-
+        System.out.println("homeButton.isDisplayed() = " + homeButton.isDisplayed());
+        System.out.println("forgetPasswordHeader = " + forgetPasswordHeader.isDisplayed());
+        System.out.println("emailText1 = " + emailText1.isDisplayed());
+        System.out.println("emailInputBox = " + emailInputBox.isDisplayed());
+        System.out.println("retrievePasswordButton = " + retrievePasswordButton.isDisplayed());
+        System.out.println("poweredByCydeoText = " + poweredByCydeoText.isDisplayed());
 
 
         //4. Verify all web elements are displayed.
