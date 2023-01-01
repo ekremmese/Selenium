@@ -64,9 +64,10 @@ public class P01 {
 
 
 
+
         //this will close all of the opened windows
         //kills the the session
-        driver.quit();
+        //driver.quit();
 
         currentURL = driver.getCurrentUrl();
         System.out.println("currentURL = " + currentURL);
