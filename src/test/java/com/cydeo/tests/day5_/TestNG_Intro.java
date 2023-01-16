@@ -13,7 +13,7 @@ public class TestNG_Intro {
         //ASSERT EQUALS:compate 2 of the same things
 
         String actual = "apple";
-        String expected = "apple";
+        String expected = "apple2";
 
         Assert.assertEquals(actual,expected);
 
@@ -22,6 +22,13 @@ public class TestNG_Intro {
     @Test()
     public  void test2(){
         System.out.println( "Test2 is running....");
+
+        //ASSERT EQUALS:compate 2 of the same things
+
+        String actual = "apple";
+        String expected = "apple2";
+
+        Assert.assertTrue(actual.equals(expected));
 
     }
 
