@@ -53,12 +53,20 @@ Method info:
 
         }
 
-        //5. Assert: Title contains expectedInTitle
+        //5. Assert: Title contains "expectedInTitle"
         String actualTitle = driver.getTitle();
         String expectedInTitle = expectedTitle;
 
         Assert.assertTrue(actualTitle.contains(expectedInTitle));
 
     }
+    /*
+    This method accepts a String "expectedTitle"
+ and Asserts if it is true      */
+    public static void verifyTitle(WebDriver driver, String expectedTitle){
+        String actualTitle = driver.getTitle();
+        Assert.assertEquals(expectedTitle,actualTitle);
+    }
+
 
 }

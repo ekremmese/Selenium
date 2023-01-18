@@ -1,13 +1,12 @@
 package com.cydeo.tests.day7_webtables_utilities_javafaker;
 
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class Task1_WindowHandling {
@@ -37,28 +36,10 @@ public class Task1_WindowHandling {
 
 
         //4. Create a logic to switch to the tab where Etsy.com is open
-        Set<String> allWindowsHandles = driver.getWindowHandles();
+
+        BrowserUtils.switchWindowAndVerify(driver,"Etsy", "Etsy");
 
 
-        for (String each : allWindowsHandles) {
-
-            driver.switchTo().window(each);
-            System.out.println("Current URL: " + driver.getCurrentUrl());
-
-            if (driver.getCurrentUrl().equals("https://www.etsy.com/")) {
-                break;
-            }
-
-        }
-
-        //5. Assert: Title contains “Etsy”
-        String actualTitle = driver.getTitle();
-        String expectedInTitle = "Etsy";
-
-        Assert.assertTrue(actualTitle.contains(expectedInTitle));
-
-
-        //Assert.assertEquals(driver.getTitle(),"Etsy Turkey - Shop for handmade, vintage, custom, and unique gifts for everyone", "Passed");
 
         //Lines to be pasted:
         //These lines will simply open new tabs using something called JavascriptExecutor
