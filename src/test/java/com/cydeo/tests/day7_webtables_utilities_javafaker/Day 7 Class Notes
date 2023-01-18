@@ -284,7 +284,13 @@ td: table data     -> used to create cells inside of a table
 th: table header-> used to create cells, but it will make content bolded and centered
 tr: table row     -> used to create rows inside of table
 
+//table[ @id='table1']//tbody//td[.='Jason']/following-sibling::td[2]
 
+//*[@id="table1"]/tbody/tr[2]/td[4]  -----> relative xpath copied from chrome
+/html/body/div/div[2]/div/div/table[1]/tbody/tr[2]/td[4] -----> absolute xpath copied from chrome
+//table[@id='table1']//tbody//td[.='Tim']/preceding-sibling::td[1]
+
+1:21 dk remaining
 ------------------------------------------------------------------------------------
 
 P1_ WRITE A LOCATOR THAT RETURNS THE TABLE 1 ITSELF
