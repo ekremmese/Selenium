@@ -24,16 +24,12 @@ public class BrowserUtils {
     }
 
     /*
-    TC #2: Create utility method
-1. Create a new class called BrowserUtils
-2. Create a method to make Task1 logic re-usable
-3. When method is called, it should switch window and verify title.
-Method info:
-• Name: switchWindowAndVerify
+This method accepts 3 arguments
 • Return type: void
 • Arg1: WebDriver
-• Arg2: String expectedInUrl
-• Arg3: String expectedTitle
+• Arg2: String expectedInUrl : for verify if the url contains given String
+-If condition matches, will break loop
+• Arg3: String expectedTitle to be compared against actualTitle
      */
 
     public static void switchWindowAndVerify(WebDriver driver, String expectedInUrl, String expectedTitle){
