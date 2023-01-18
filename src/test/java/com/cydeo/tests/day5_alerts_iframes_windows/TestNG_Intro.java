@@ -1,4 +1,4 @@
-package com.cydeo.tests.day5_;
+package com.cydeo.tests.day5_alerts_iframes_windows;
 
 import org.testng.Assert;
 import org.testng.annotations.*;

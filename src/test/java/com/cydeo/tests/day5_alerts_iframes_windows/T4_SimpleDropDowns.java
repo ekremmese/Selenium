@@ -1,4 +1,4 @@
-package com.cydeo.tests.day5_;
+package com.cydeo.tests.day5_alerts_iframes_windows;
 
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
