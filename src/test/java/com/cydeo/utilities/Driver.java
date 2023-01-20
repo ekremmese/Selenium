@@ -37,15 +37,20 @@ public class Driver {
             This way, we can control which browser is opened from outside our code, from configuration properties.
              */
             String browserType = ConfigurationReader.getProperty("browser");
-            switch (browserType){
-                case "chrome" :
+
+            /*
+            depending on the browserType that will be return from the configuration.properties file
+            switch statement will determine the case and set up the driver
+             */
+            switch (browserType) {
+                case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
                     driver.manage().window().maximize();
                     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
 
-                case "firefox" :
+                case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                     driver.manage().window().maximize();

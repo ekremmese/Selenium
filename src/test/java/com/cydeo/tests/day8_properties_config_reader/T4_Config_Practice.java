@@ -2,18 +2,15 @@ package com.cydeo.tests.day8_properties_config_reader;
 
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.ConfigurationReader;
-import com.cydeo.utilities.WebDriverFactory;
+import com.cydeo.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import java.util.concurrent.TimeUnit;
 
 public class T4_Config_Practice {
 
+    /*
     WebDriver driver;
 
     //3- Write “apple” in search box
@@ -37,16 +34,20 @@ public class T4_Config_Practice {
         driver = WebDriverFactory.getDriver(browserType);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get(ConfigurationReader.getProperty("URL"));
+
 
     }
+
+     */
 
     @Test
     public void google_search(){
 
-        WebElement googleSearchBox = driver.findElement(By.xpath("//input[@class='gLFyf']"));
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("URL"));
+        WebElement googleSearchBox = Driver.getDriver().findElement(By.xpath("//input[@class='gLFyf']"));
         googleSearchBox.sendKeys(ConfigurationReader.getProperty("searchKeyword") + Keys.ENTER);
-        BrowserUtils.verifyTitle(driver, ConfigurationReader.getProperty("searchKeyword") + " - Google'da Ara");
+        BrowserUtils.verifyTitle(Driver.getDriver(), ConfigurationReader.getProperty("searchKeyword") + " - Google'da Ara");
     }
 
 }
