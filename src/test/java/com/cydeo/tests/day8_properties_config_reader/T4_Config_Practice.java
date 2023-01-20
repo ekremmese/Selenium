@@ -6,6 +6,7 @@ import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -43,7 +44,8 @@ public class T4_Config_Practice {
     @Test
     public void google_search(){
 
-        driver.findElement(By.xpath("//input[@class='gLFyf']")).sendKeys(ConfigurationReader.getProperty("searchKeyword") + Keys.ENTER);
+        WebElement googleSearchBox = driver.findElement(By.xpath("//input[@class='gLFyf']"));
+        googleSearchBox.sendKeys(ConfigurationReader.getProperty("searchKeyword") + Keys.ENTER);
         BrowserUtils.verifyTitle(driver, ConfigurationReader.getProperty("searchKeyword") + " - Google'da Ara");
     }
 
