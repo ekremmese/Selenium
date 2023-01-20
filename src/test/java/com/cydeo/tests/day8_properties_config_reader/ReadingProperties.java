@@ -24,7 +24,7 @@ public class ReadingProperties {
 
         System.out.println("properties.get(\"browser\") = " + properties.getProperty("browser"));
 
-        System.out.println("properties.getProperty(\"environment\") = " + properties.getProperty("environment"));
+        System.out.println("properties.getProperty(\"environment\") = " + properties.getProperty("env"));
 
         System.out.println("properties.getProperty(\"usernam\") = " + properties.getProperty("username"));
 
