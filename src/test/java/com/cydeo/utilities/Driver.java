@@ -64,5 +64,10 @@ public class Driver {
 
     }
 
+    //driver.quit() --->NoSuchSession
+    //driver.close() --->
+
+    //try to create a method named closeDriver()
+
 
 }
